@@ -7,6 +7,8 @@ This project provides our two top performing strategies as Beige-box attacks for
 
 For images protected by the StegaStamp algorithm, we implemented a watermark overwriting attack. This involved inverting the bits of the extracted binary message (i.e., converting 0s to 1s and 1s to 0s) and then encoding this inverted message back into the images. The extraction and encoding processes utilized the original StegaStamp detector and encoder, as detailed in the paper [StegaStamp](https://arxiv.org/abs/1904.05343).
 
+![StegaStamp watermark overwriting attack](./assets/method_1.png)
+
 In our submission, we modified the first 150 images (`0.png` to `149.png`) by overwriting the watermark, while the remaining 150 images were left unaltered. This method successfully removed the watermark from the modified images, achieving an overall watermark detection performance of 0.5. Furthermore, the attack preserved a high level of image quality, with an image quality degradation of approximately 0.065.
 
 The code for this attack can be checked in `notebooks/stegastamp_attack.ipynb`.
